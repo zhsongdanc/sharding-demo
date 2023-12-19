@@ -28,9 +28,9 @@ public class ReadWriteTest {
     }
 
     /**
-     * 读写分离：事务测试
+     * 读写分离：事务测试，为了避免多节点的分布式事务，读写如果在同一个事务中会都在master上进行
      */
-    @Transactional//开启事务
+    @Transactional//开启事务, junit中使用事务会自动回滚
     @Test
     public void testTrans(){
 
